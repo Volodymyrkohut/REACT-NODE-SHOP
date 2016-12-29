@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <form name="upload" >
+    <input type="file" name="img" multiple="true">
+    <input type="submit" value="Загрузить">
+  </form>
+
+
+  <div id="log">Прогресс загрузки</div>
+
+
+  <script>
+    function log(html) {
+      document.getElementById('log').innerHTML = html;
+    }
+
+   
+
+
+    function upload(file) {
+
+      var xhr = new XMLHttpRequest();
+
+      // обработчики можно объединить в один,
+      // если status == 200, то это успех, иначе ошибка
+      xhr.onload = xhr.onerror = function() {
+        if (this.status == 200) {
+          log("success");
+        } else {
+          log("error " + this.status);
+        }
+      };
+
+      // обработчик для закачки
+      xhr.upload.onprogress = function(event) {
+        log(event.loaded + ' / ' + event.total);
+      }
+
+      xhr.open("POST", "/api/list", true);
+      xhr.send(file);
+      console.log(file);
+
+    }
+
+
+ document.forms.upload.onsubmit = function() {
+   var formdata = new FormData();
+
+   var obj = this.elements.img.files
+        // for(var i = 0; i < obj.length; i++){
+        //   formdata.append("img", obj[i]);
+        // }
+//or we can use for/in
+     for(i in obj){
+        if(obj.hasOwnProperty(i)){
+            formdata.append("img", obj[i]);
+        }
+     }
+
+      if (obj) {      
+        upload(formdata);
+      }
+      return false;
+    }
+
+
+  </script>
+</body>
+
+</html>

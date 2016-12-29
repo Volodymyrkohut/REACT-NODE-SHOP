@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'devserver' ]
+2 info using npm@3.10.8
+3 info using node@v7.0.0
+4 verbose run-script [ 'predevserver', 'devserver', 'postdevserver' ]
+5 info lifecycle shop@1.0.0~predevserver: shop@1.0.0
+6 silly lifecycle shop@1.0.0~predevserver: no script for predevserver, continuing
+7 info lifecycle shop@1.0.0~devserver: shop@1.0.0
+8 verbose lifecycle shop@1.0.0~devserver: unsafe-perm in lifecycle true
+9 verbose lifecycle shop@1.0.0~devserver: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\Володимир\Desktop\shop\node_modules\.bin;C:\Users\Володимир\Desktop\cat\node_modules\ImageMagick-7.0.3-Q16;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;F:\MongoDB\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\nodejs\;C:\Users\Володимир\AppData\Roaming\npm
+10 verbose lifecycle shop@1.0.0~devserver: CWD: C:\Users\Володимир\Desktop\shop
+11 silly lifecycle shop@1.0.0~devserver: Args: [ '/d /s /c',
+11 silly lifecycle   'webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8090 --host 0.0.0.0' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1026:11)
+12 verbose stack     at process.kill (internal/process.js:173:13)
+12 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:91:20)
+12 verbose stack     at process.emit (events.js:185:7)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:200:44)
+13 verbose cwd C:\Users\Володимир\Desktop\shop
+14 error Windows_NT 6.1.7600
+15 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "devserver"
+16 error node v7.0.0
+17 error npm  v3.10.8
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
